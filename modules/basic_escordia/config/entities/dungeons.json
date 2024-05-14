@@ -1,0 +1,8 @@
+{
+    "Goblin Cave": {
+        "type": "dungeon",
+        "number_of_enemies": 2,
+        "monsters": ["Goblin Raider", "Goblin Archer", "Goblin Mage"],
+        "boss": "Goblin Leader"
+    }
+}

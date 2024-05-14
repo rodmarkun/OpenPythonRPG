@@ -1,0 +1,16 @@
+{
+    "Fireball": {
+        "effect": {
+            "type": "damage",
+            "magnitude": 20
+        },
+        "mana_cost": 4
+    },
+    "Small Healing": {
+        "effect": {
+            "type": "healing",
+            "magnitude": 12
+        },
+        "mana_cost": 4
+    }
+}

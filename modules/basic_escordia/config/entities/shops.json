@@ -1,0 +1,8 @@
+{
+    "Blacksmith_PV": {
+        "type": "shop",
+        "subtype": "blacksmith",
+        "inventory": ["Iron Ingot"],
+        "npcs": ["Blacksmith"]
+    }
+}

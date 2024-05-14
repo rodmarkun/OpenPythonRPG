@@ -1,0 +1,20 @@
+{
+    "Peaceful Village": {
+        "superior_environment": null,
+        "contiguous_environments": ["Small Forest"],
+        "default_status": {"shops": ["Blacksmith_PV"], "npcs": ["Guard", "Wandering Mage"]},
+        "possible_actions": ["Craft", "Rest"]
+    },
+    "Small Forest": {
+        "superior_environment": null,
+        "contiguous_environments": ["Peaceful Village", "Goblin Cave"],
+        "default_status": {"wood": 50, "monsters": ["Wolf", "Bat"]},
+        "possible_actions": ["Fight", "Chop Wood"]
+    },
+    "Goblin Cave": {
+        "superior_environment": null,
+        "contiguous_environments": ["Small Forest"],
+        "default_status": {"dungeon": "Goblin Cave"},
+        "possible_actions": ["Enter Dungeon"]
+    }
+}

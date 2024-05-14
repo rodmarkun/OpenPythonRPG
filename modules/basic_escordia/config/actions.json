@@ -1,0 +1,32 @@
+{
+    "Walk": {
+        "extra_params": ["new_environment"],
+        "default": true
+    },
+    "Talk":{
+        "extra_params": ["npc"],
+        "has_condition": true,
+        "default": true
+    },
+    "Craft": {
+        "extra_params": ["item"]
+    },
+    "Equip": {
+        "extra_params": ["item"],
+        "has_condition": true,
+        "default": true
+    },
+    "Fight": {},
+    "Attack": {},
+    "Spell": {
+        "extra_params": ["spell"],
+        "has_condition": true
+    },
+    "Chop Wood": {
+        "has_condition": true
+    },
+    "Enter Dungeon": {},
+    "Drink Potion": {
+        "has_condition": true
+    }
+}

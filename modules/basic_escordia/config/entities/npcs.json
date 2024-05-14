@@ -1,0 +1,21 @@
+{
+    "Wandering Mage": {
+        "type": "npc",
+        "location": "Peaceful Village",
+        "dialogue_prompt": "Give the player a small talk and then gift them a spell named Fireball",
+        "dialogue": "  Ah, greetings brave adventurer! *tips hat* I see you've made your way to our humble village. We don't often get visitors here, especially ones as skilled and fearless as yourself. It's a dangerous world out there, but we're always grateful for those who dare to face its challenges. As a token of our appreciation, I'd like to gift you with a powerful spell - Fireball! *presents a glowing crystal orb* This spell will allow you to unleash a fiery explosion upon thy enemies, scorching them with intense heat and flames. May it serve thee well on thy journey, and may thou return victorious!",
+        "exhausted_dialogue": "  Ah, back so soon! *adjusts hat* Did you find the Fireball spell useful, my dear adventurer?",
+        "triggers": {
+            "learn_spell": {
+                "spell_name": "Fireball"
+            }
+        }
+    },
+    "Guard": {
+        "type": "npc",
+        "location": "Peaceful Village",
+        "dialogue_prompt": "Warn the player about the dangers of the Goblin Cave",
+        "dialogue": "  Oho! Adventurer, thou seeketh danger and glory? Then listen well to ol' Grimgold Ironfist, the grizzled dwarven blacksmith of Thunderhaven. The Goblin Cave be a treacherous lair, filled with wicked little beasties that'll skewer thee with their poisoned daggers and whisk thee away to their underground dens. Ye have been warned, laddie! The cave be riddled with deadly traps and puzzles, and the goblins themselves be cunning and quick. They'll ambush thee with their sneaky tactics and overwhelm thee with sheer numbers. But fear not, brave adventurer! If ye can survive the perils within, the treasure hidden deep within the cave shall be thine for the taking. So, what say ye? Dost thou dare to enter the belly of the beast and claim thy fortune?",
+        "exhausted_dialogue": "  Ah, greetings once more, brave adventurer! I see thou hast decided to heed my warning and venture forth despite the dangers that lie within the Goblin Cave. May Fortune smile upon thee, and may thy sword arm remain strong against the foul creatures that dwell within."
+    }
+}

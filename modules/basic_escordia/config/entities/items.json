@@ -1,0 +1,47 @@
+{
+    "Rusty Sword": {
+        "type": "weapon",
+        "subtype": "sword",
+        "stat_change": {
+            "ATK": 3
+        },
+        "value": 10
+    },
+    "Iron Sword": {
+        "type": "weapon",
+        "subtype": "sword",
+        "stat_change": {
+            "ATK": 10
+        },
+        "value": 50,
+        "recipe": {
+            "Iron Ingot": 3,
+            "Wood": 2
+        }
+    },
+    "Wolf Hide Armor": {
+        "type": "armor",
+        "subtype": "chestplate",
+        "stat_change": {
+            "MAXHP": 5,
+            "HP": 5,
+            "DEF": 5,
+            "MDEF": 3
+        },
+        "value": 30,
+        "recipe": {
+            "Wolf Hide": 3
+        }
+    },
+    "Health Potion": {
+        "type": "consumable",
+        "subtype": "potion",
+        "stat_change": {
+            "HP": 10
+        },
+        "value": 10,
+        "recipe": {
+            "Bat Eye": 1
+        }
+    }
+}
