@@ -2,6 +2,10 @@
 
 NOTE: Escordia is still a WIP and it is currently on the earliest stages of development. There is still a lot to do until a stable beta. Keep an eye on the project while I keep pushing updates! (⌒_⌒;)
 
+<p align="center">
+  <img src="https://github.com/rodmarkun/OpenEscordia/assets/75074498/7980cfc1-d582-4b99-8382-236b2ee5bc7e" width="500" />
+</p>
+
 ## What is OpenEscordia?
 
 OpenEscordia is a free, modular, open-source RPG building tool with AI integrations. It enables developers to create fully-fledged RPG games with ease and flexibility. The core of OpenEscordia revolves around **Modules**, which represent entire RPG games. The OpenEscordia engine loads these modules and instantly prepares them for gameplay.
