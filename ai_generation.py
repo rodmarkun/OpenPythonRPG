@@ -14,7 +14,7 @@ OPENAI_API_KEY = "your-openai-api-key"
 # --- Entity directory and master prompts
 ENTITY_DIR = "modules/basic_escordia/config/entities/"
 MASTER_PROMPTS = {
-    "npcs": "You are a NPC from a RPG game. Your answers should be rich but not too long, answer in one paragraph. Do not get out of character.",
+    "npcs": "You are a NPC from a RPG game. Your answers should be rich but not too long, answer in one or two sentences. Do not get out of character.",
     # Add other master prompts here
 }
 
@@ -45,8 +45,8 @@ class AIGenerator:
         payload = {
             "input": {
                 "prompt": prompt,
-                "max_new_tokens": 500,
-                "temperature": 0.9,
+                "max_new_tokens": 300,
+                "temperature": 0.85,
                 "top_k": 50,
                 "top_p": 0.7,
                 "repetition_penalty": 1.2,
@@ -93,7 +93,7 @@ def process_entity(file_path, master_prompt, ai_generator):
     for entity_name, entity_info in entities.items():
         for key, value in entity_info.items():
             if key.endswith('_prompt'):
-                prompt = f"[INST] <<SYS>>{master_prompt}<</SYS>>{value}[/INST]"
+                prompt = f"[INST] <<SYS>>{master_prompt}<</SYS>>You are a {entity_name}, from Peaceful Village and your instructions are these: {value}[/INST]"
                 logger.info(f"Sending prompt for {entity_name} ({key})")
                 response = ai_generator.generate_response(prompt)
                 if response and response.get("status") == "COMPLETED":

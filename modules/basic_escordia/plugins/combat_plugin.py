@@ -1,4 +1,5 @@
 import random
+import math
 from plugin import Plugin
 
 class CombatPlugin(Plugin):
@@ -80,3 +81,14 @@ class CombatPlugin(Plugin):
         actor.status["stats"]["HP"] = actor.status["stats"]["MAXHP"]
         actor.status["stats"]["MP"] = actor.status["stats"]["MAXMP"]
         self.enemy = None
+
+def miss_formula(atk_speed: int, def_speed: int) -> int:
+    """
+    Formula for calculating the chance of missing an attack.
+
+    :param atk_speed: Attacker's speed.
+    :param def_speed: Defender's speed.
+    :return: Chance of missing an attack.
+    """
+
+    return math.floor(math.sqrt(max(0, (5 * def_speed - atk_speed * 2))))

@@ -22,11 +22,18 @@
         "extra_params": ["spell"],
         "has_condition": true
     },
+    "Buy": {
+        "extra_params": ["item"]
+    },
     "Chop Wood": {
         "has_condition": true
     },
     "Enter Dungeon": {},
+    "Enter Shop": {
+        "has_condition": true
+    },
     "Drink Potion": {
         "has_condition": true
-    }
+    },
+    "Exit": {}
 }

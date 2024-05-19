@@ -2,7 +2,7 @@
     "Peaceful Village": {
         "superior_environment": null,
         "contiguous_environments": ["Small Forest"],
-        "default_status": {"shops": ["Blacksmith_PV"], "npcs": ["Guard", "Wandering Mage"]},
+        "default_status": {"shop": "Blacksmith_PV", "npcs": ["Guard", "Wandering Mage"]},
         "possible_actions": ["Craft", "Rest"]
     },
     "Small Forest": {

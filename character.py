@@ -3,7 +3,7 @@ class Character:
     Characters that populate the game world. They can perform actions and change environments. Can be controlled by the player or by the game itself.
     """
 
-    def __init__(self, name: str, status: dict, engine: 'Engine', event_dispatcher: 'EventDispatcher', current_environment: 'Environment', plugins: list, AI_controlled: bool = False) -> None:
+    def __init__(self, name: str, status: dict, engine: 'Engine', event_dispatcher: 'EventDispatcher', current_environment: 'Environment', plugins: list, image_url: str = None, AI_controlled: bool = False) -> None:
         """
         Initializes a new instance of the Character class.
 
@@ -23,7 +23,7 @@ class Character:
         self.current_environment = current_environment
         self.current_environment.add_character(self)
         self.possible_actions = None
-        self.image = None
+        self.image_url = image_url
         self.plugins = []
         for p in plugins:
             self.add_plugin(p)
@@ -118,3 +118,16 @@ class Character:
         messages_to_display = self.message_queue[:]
         self.message_queue = []  # Clear the message queue
         return messages_to_display
+    
+    def to_json(self):
+        """
+        Converts the Character object to a JSON serializable dictionary.
+
+        Returns:
+            dict: The JSON serializable dictionary representation of the Character object.
+        """
+        return {
+            "name": self.name,
+            "status": self.status,
+            "current_environment": self.current_environment.name
+        }

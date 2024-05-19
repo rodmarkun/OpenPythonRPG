@@ -81,6 +81,12 @@ def spell_params(actor, current_environment):
 def spell_condition(actor, current_environment) -> bool:
     return len(actor.status.get("spellbook", [])) > 0
 
+def buy(actor, current_environment, item):
+    actor.notify_plugins("buy_item", {"item_name": item})
+
+def buy_params(actor, current_environment):
+    return current_environment.status.get("items", [])
+
 def chop_wood(actor, current_environment):
     wood_chopped = min(random.randint(1, 3), current_environment.status.get("wood", 0))
     actor.notify_plugins("item_acquired", {"item_name": "Wood", "quantity": wood_chopped})
@@ -93,6 +99,12 @@ def chop_wood_condition(actor, current_environment) -> bool:
 def enter_dungeon(actor, current_environment):
     actor.notify_plugins("entered_dungeon", {"dungeon_entity": actor.engine.get_entity(current_environment.status.get("dungeon"))})
 
+def enter_shop(actor, current_environment):
+    actor.notify_plugins("enter_shop", {"shop_name": current_environment.status.get("shop")})
+
+def enter_shop_condition(actor, current_environment) -> bool:
+    return current_environment.status.get("shop", False)
+
 def drink_potion(actor, current_environment):
     actor.notify_plugins("item_used", {"item_name": "Health Potion", "quantity": 1})
     actor.status["HP"] = min(actor.status["MAXHP"], actor.status["HP"] + 10)
@@ -101,3 +113,5 @@ def drink_potion(actor, current_environment):
 def drink_potion_condition(actor, current_environment) -> bool:
     return actor.status.get("inventory", {}).get("Health Potion", 0) > 0
 
+def exit(actor, current_environment):
+    actor.change_environment(current_environment.superior_environment)

@@ -43,5 +43,10 @@
         "recipe": {
             "Bat Eye": 1
         }
+    },
+    "Iron Ingot": {
+        "type": "resource",
+        "subtype": "ingot",
+        "value": 20
     }
 }
